@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var taped: Bool = false
+
     @IBAction func tapHandler(_ sender: Any) {
-        myTextField.text = "changed!"
+        myTextField.text = taped ? "" : "changed!"
+        taped = !taped
     }
 
     @IBOutlet weak var myTextField: UITextField!
